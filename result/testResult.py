@@ -2,8 +2,6 @@
 from result.HTMLTestRunner import HTMLTestRunner
 import unittest
 from testCase.testcase_login import Login
-from testCase.testcase_login_null import LoginNull
-from testCase.multilotto_get_config import TestML
 from common.getpathInfo import get_path
 import os
 import time
@@ -30,7 +28,5 @@ class TestResult:
 if __name__ == "__main__":
     h1 = TestResult()
     h1.suite.addTest(Login('test_login'))
-    tests = [LoginNull('test_login_null'), Login('test_login_error'), TestML('testGetnearbyplace')]
-    h1.suite.addTests(tests)
     h1.get_html_report()
 

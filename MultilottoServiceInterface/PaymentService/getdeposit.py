@@ -5,8 +5,8 @@ class Deposit(Login):
 
     lg = Login("login_by_account")
 
-    def deposit_service(self):
-        return self.lg.login_cookie_service("getdeposit")
+    def deposit_service(self, reslut_type_is_str=False):
+        return self.lg.login_cookie_service("getdeposit",reslut_type_is_str)
 
 
 if __name__ == '__main__':

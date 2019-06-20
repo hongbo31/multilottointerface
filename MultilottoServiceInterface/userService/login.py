@@ -22,10 +22,10 @@ class Login(BaseService):
         service_url = self.case_excle.get_interface_url(case_name)
         service_method = self.case_excle.get_method(case_name)
         config_http = ConfigHttp(service_url, service_header, service_data, service_method)
-        print("这次的headers: " + str(service_header))
-        print("这次的url：" + str(service_url))
-        print("这次的data: " + str(service_data))
-        print("这次的method：" + str(service_method))
+        # print("这次的headers: " + str(service_header))
+        # print("这次的url：" + str(service_url))
+        # print("这次的data: " + str(service_data))
+        # print("这次的method：" + str(service_method))
         result = config_http.request_result(result_type_is_str)
         return result
 
